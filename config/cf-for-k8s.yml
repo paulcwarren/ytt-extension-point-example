@@ -2,7 +2,6 @@
 #@ load("@ytt:template", "template")
 #@ load("@ytt:overlay", "overlay")
 #@ load("@ytt:data", "data")
-#@ load("@ytt:assert", "assert")
 
 #@ cf4k8s = library.get("cf-for-k8s")
 

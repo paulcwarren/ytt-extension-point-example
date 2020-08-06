@@ -1,0 +1,7 @@
+#@ load("@ytt:library", "library")
+#@ load("@ytt:template", "template")
+
+#@ us = library.get("usage-service")
+#@ usYaml = us.eval()
+--- #@ template.replace(usYaml)
+
