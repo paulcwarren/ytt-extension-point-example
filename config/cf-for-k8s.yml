@@ -1,0 +1,16 @@
+#@ load("@ytt:library", "library")
+#@ load("@ytt:template", "template")
+#@ load("@ytt:overlay", "overlay")
+#@ load("@ytt:data", "data")
+#@ load("@ytt:assert", "assert")
+
+#@ cf4k8s = library.get("cf-for-k8s")
+
+#@ chain = cf4k8s.eval()
+
+#@ for a in data.values.cffork8s.overlays:
+#@ lib = library.get(a.overlay.library)
+#@ chain = overlay.apply(chain, lib.export(a.overlay.overlay)())
+#@ end
+--- #@ template.replace(chain)
+

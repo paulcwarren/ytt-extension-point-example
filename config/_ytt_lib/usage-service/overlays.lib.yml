@@ -1,0 +1,11 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:overlay", "overlay")
+
+#@ def overlays():
+#@overlay/match by=overlay.subset({"component":{"name":"foo"}})
+---
+component:
+  items:
+  #@overlay/append
+  - val: "from-usage-service"
+#@ end
