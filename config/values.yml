@@ -1,7 +1,8 @@
 #@data/values
 ---
 cffork8s:
-  overlays:
-    - overlay:
+  extension_points:
+    example_extension_point:
+    - extension:
         library: "usage-service"
-        "overlay": "overlays"
+        overlay: "overlays"

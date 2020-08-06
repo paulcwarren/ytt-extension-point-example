@@ -7,9 +7,9 @@
 
 #@ chain = cf4k8s.eval()
 
-#@ for a in data.values.cffork8s.overlays:
-#@ lib = library.get(a.overlay.library)
-#@ chain = overlay.apply(chain, lib.export(a.overlay.overlay)())
+#@ for extension in data.values.cffork8s.extension_points.example_extension_point:
+#@ lib = library.get(extension.extension.library)
+#@ chain = overlay.apply(chain, lib.export(extension.extension.overlay)())
 #@ end
 --- #@ template.replace(chain)
 
